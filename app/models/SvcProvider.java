@@ -8,18 +8,21 @@ public class SvcProvider {
 	@Id
     private ObjectId id;
     private String name;
+    private String imagePath;
+    private String promotionalRate;
+    private String originalRate;
     
 	public SvcProvider() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public SvcProvider(ObjectId id, String name) {
-		super();
-		this.id = id;
-		this.name = name;
-	}
 
+	@Override
+	public String toString() {
+		return "SvcProvider [id=" + id + ", name=" + name + ", imagePath=" + imagePath + ", promotionalRate="
+				+ promotionalRate + ", originalRate=" + originalRate + "]";
+	}
 
 
 	public ObjectId getId() {
@@ -34,8 +37,36 @@ public class SvcProvider {
 	public void setName(String name) {
 		this.name = name;
 	}
-	@Override
-	public String toString() {
-		return "Item [id=" + id + ", name=" + name + "]";
+
+
+	public String getImagePath() {
+		return imagePath;
 	}
+
+
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
+	}
+
+
+	public String getPromotionalRate() {
+		return promotionalRate;
+	}
+
+
+	public void setPromotionalRate(String promotionalRate) {
+		this.promotionalRate = promotionalRate;
+	}
+
+
+	public String getOriginalRate() {
+		return originalRate;
+	}
+
+
+	public void setOriginalRate(String originalRate) {
+		this.originalRate = originalRate;
+	}
+	
+
 }

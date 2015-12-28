@@ -9,5 +9,9 @@ GET     /                           controllers.Application.index()
 GET    /svcproviders/:svcproviderid  controllers.Application.getSvcProvider(svcproviderid: String)
 GET    /svcproviders	            controllers.Application.getSvcProviders()
 
+
+#GET    /categories/:categoryid  controllers.Application.getCategories(category: String)
+GET    /categories	            controllers.Application.getCategories()
+
 # Map static resources from the /public folder to the /assets URL path
 GET    /*file             			controllers.Assets.at(path="/public", file)

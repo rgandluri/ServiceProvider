@@ -2,6 +2,7 @@ package controllers;
 
 import java.util.List;
 
+import models.Category;
 import models.SvcProvider;
 import play.*;
 import play.libs.Json;
@@ -22,6 +23,11 @@ public class Application extends Controller {
 
     public static Result getSvcProviders() {
     	List<SvcProvider> list =  SvcProviderController.getAllSvcProviders();
+    	return ok(Json.toJson(list)) ;
+    }
+
+    public static Result getCategories() {
+    	List<Category> list =  SvcProviderController.getCategories();
     	return ok(Json.toJson(list)) ;
     }
 }
