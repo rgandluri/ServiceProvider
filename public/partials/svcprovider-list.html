@@ -1,0 +1,37 @@
+<div class="maincontent-area">
+	<div class="zigzag-bottom"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="latest-product">
+					<h2 class="section-title">Latest Products</h2>
+					<div class="product-carousel">
+						<div ng-repeat="cust in svcProviders">
+							<div class="single-product">
+								<div class="product-f-image">
+									<img ng-src="images/{{cust.imagePath}}" alt="">
+									<div class="product-hover">
+										<a href="#" class="add-to-cart-link"><i
+											class="fa fa-shopping-cart"></i> Setup a consultation</a> <a
+											href="single-product.html" class="view-details-link"><i
+											class="fa fa-link"></i> See details</a>
+									</div>
+								</div>
+
+								<h2>
+									<a href="single-product.html">{{cust.name}}</a>
+								</h2>
+
+								<div class="product-carousel-price">
+									<ins>{{cust.promotionalRate}}</ins>
+									<del>{{cust.originalRate}}</del>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End main content area -->
