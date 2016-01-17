@@ -4,7 +4,6 @@ import java.util.List;
 
 import models.Category;
 import models.SvcProvider;
-import play.*;
 import play.libs.Json;
 import play.mvc.*;
 
@@ -23,6 +22,7 @@ public class Application extends Controller {
 
     public static Result getSvcProviders() {
     	List<SvcProvider> list =  SvcProviderController.getAllSvcProviders();
+    	System.out.println("test");
     	return ok(Json.toJson(list)) ;
     }
 
